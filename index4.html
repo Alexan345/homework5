@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS DOM paragraph style</title>
+<link rel="stylesheet" href="style.css">   
+</head>
+<body>
+<p id ='text'>JavaScript Exercises</p>
+<div>
+<button id="jsstyle">Style</button>
+</div>
+<script>
+let txtfont  = 'Lato';
+let txtColor = 'red';
+let txtSize = 'Bold';
+
+let buttjsstyle = document.querySelector('#jsstyle');
+let parag = document.querySelector('#text');
+buttjsstyle.addEventListener('click', () => { 
+  parag.style.color = txtColor;
+  parag.style.fontWeight = txtSize;
+  parag.style.fontFamily = txtfont;
+});
+/*buttjsstyle.addEventListener('click', () => parag.style.size = txtSize);
+buttjsstyle.addEventListener('click', () => parag.style.font = txtFont);
+
+
+/*function myParagraph(txtfont, txtColor, txtsize){
+let txtfont  = 'Lato';
+let txtColor = 'red';
+let txtsize = 'Bold';
+
+parag.style.fontweight = txtsize;
+parag.style.color = txtColor;
+parag.style.fontstyle = txtfont;
+})
+
+myParagraph(txtfont, txtColor, txtsize);*/
+</script>
+</body>
+</html>

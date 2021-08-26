@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"> 
+<body>
+    <input type="button" id="hider" value="Нажмите, чтобы спрятать текст"/>
+    <div id="hide">Текст</div>
+<script>
+  let hideText = document.querySelector('#hide');
+  let hideBtn = document.querySelector('#hider');
+  let i = 0;
+  hideBtn.addEventListener('click', function(){
+  i += 1;
+  if (i % 2 > 0) {
+   hideText.hidden = true;  
+ }else {
+   hideText.hidden = false;
+ }
+ console.log(i);   
+});
+</script> 
+</body>
+</html> 

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset=utf-8 />
+<title>Return first and last name from a form - w3resource</title>
+  </head>
+  <body>
+    <form id="form1">
+First name: <input type="text" name="fname" value="David"  id=family ><br>
+Last name: <input type="text" name="lname" value="Beckham" id=lastname ><br>
+<input id="sub-btn" type="submit" value="Submit">
+    </form>
+    <script>
+    
+      let subBtn = document.querySelector('#sub-btn');
+      subBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        let inputs = document.getElementsByTagName('input');
+      for(let input of inputs) {
+        if(input.value == 'Submit') {
+          continue;
+        } else {
+          console.log(input.value);
+        }
+      } 
+      })
+      
+      //aici imi arata in console.log --David, Beckham, Submit, dupa cum am inteles submit nu trebuie
+
+      // let names = document.querySelectorAll('name');
+      // for(let name of names)
+      // console.log(name); // aici nu lucreaza scriptul
+      /*let formData = document.querySelector('#form1');
+      console.log(formData);
+    
+      formData.addEventListener('submit', function(e){
+        e.preventDefault();
+        console.log(formData.elements[0].value);
+        console.log(formData.elements[1].value);
+        for(let i = 0; i < formData.length; i++) {
+          if(formData.elements[i].value == 'Submit') {
+            continue;
+          } else {
+          console.log(formData.elements[i].value);
+          }
+        }
+      })*/
+
+ 
+
+    </script>
+  </body>
+</html>
